@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html lang="en">
+	<head>
+	<title>title</title>
+	<link rel="stylesheet" href="stylesheets\style.css">
+	</head>
+	
+	<body>
+	<!-- 2 Examples of the "onclick" feature in javascript -->
+		<h1 onclick="trustTest(this)">DO NOT CLICK!</h1>
+		<button onclick="doClick()">CLICK HERE INSTEAD</button>
+		<p>
+			blah
+		</p>
+
+			<h2>JavaScript Prompt</h2>
+
+			<button onclick="nameComplimenter()">Begin</button>
+
+			<p id="demo"></p>
+
+
+		<script type="text/javascript">
+			function trustTest(id) {
+			  id.innerHTML = "Really?";
+			}
+			function doClick() {
+			alert("AHH");
+			}
+			
+	<!-- Example of prompt -->
+			function nameComplimenter() {
+			  let text;
+			  let person = prompt("Please enter your name:", "Forename Surname");
+			  if (person == null || person == "") {
+				text = "Please enter a valid name!.";
+			  } else {
+				text = "Hi " + person + " I like your name";
+			  }
+			  document.getElementById("demo").innerHTML = text;
+			}
+					
+		</script>
+	</body>
+</html>
